@@ -21,11 +21,11 @@ The application will be available at http://localhost:5000.
 - **/planes**: Returns the latest real-time data for a list of planes.
 
     example: http://localhost:5000/planes
-    ![alt text](image-1.png)
+    ![alt text](resources/image-1.png)
 - **/planeHistory**: Returns the flight history of a specific plane. You need to provide the `icao` parameter to fetch the history. 
 
     example: http://localhost:5000/planeHistory?icao=EBJW 
-    ![alt text](image.png)
+    ![alt text](resources/image.png)
 
 ## Technologies Used
 

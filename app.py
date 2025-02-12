@@ -26,7 +26,7 @@ class PlaneFrameGenerator:
         self.icao_list = icao_list
 
     def generate_frame(self, icao):
-        speed = random.uniform(0, 1000)
+        speed = random.uniform(800, 1000)
         lat = random.uniform(-90, 90)
         lon = random.uniform(-180, 180)
         alt = random.randint(0, 50000)
@@ -91,7 +91,7 @@ def get_planes():
 @app.route('/planeHistory', methods=['GET'])
 def get_plane_history():
     icao = request.args.get('icao')
-    frames = db.session.query(PlanesFrameDB).filter_by(icao=icao).order_by(PlanesFrameDB.timestamp.desc()).limit(10).all()
+    frames = db.session.query(PlanesFrameDB).filter_by(icao=icao).order_by(PlanesFrameDB.timestamp.desc()).limit(50).all()
 
     history =[]
     for frame in frames:
